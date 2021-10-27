@@ -1,1 +1,1 @@
-web: Node server.js
+web: npm run live

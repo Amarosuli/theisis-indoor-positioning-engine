@@ -20,7 +20,7 @@ customerlist.on('value', function(data) {
                 <div class="flex items-center text-xs">
                     <div class="relative block w-8 h-8 mr-3 rounded">
                         <img class="object-contain w-full h-full rounded"
-                            src="/public/img/company/${data.key}.png" alt="${customer}" loading="lazy" />
+                            src="/img/company/${data.key}.png" alt="${customer}" loading="lazy" />
                         <div class="absolute inset-0 rounded shadow-inner" aria-hidden="true"></div>
                     </div>
                 </div>
@@ -212,7 +212,7 @@ window.edit = function edit(value) {
                       </label>
                         <div class="relative flex items-center justify-center w-full mr-3 mt-4 rounded">
                             <img class="object-contain w-40 h-40 rounded p-2 "
-                                src="/public/img/company/${int.id}.png" alt="${customer}" loading="lazy" />
+                                src="/img/company/${int.id}.png" alt="${customer}" loading="lazy" />
                             <div class="absolute inset-0 rounded shadow-inner" aria-hidden="true"></div>
                         </div>
                    </div>

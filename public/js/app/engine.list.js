@@ -30,7 +30,7 @@ enginelist.on('value', function(data) {
             <div class="flex items-center text-xs">
                <div class="relative hidden w-8 h-8 mr-3 rounded md:block">
                   <img class="object-cover p-1 w-full h-full rounded"
-                     src="/public/img/company/${engine.customer}.png" alt="${engine.customer}" loading="lazy" />
+                     src="/img/company/${engine.customer}.png" alt="${engine.customer}" loading="lazy" />
                   <div class="absolute inset-0 rounded shadow-inner" aria-hidden="true"></div>
                </div>
                <div>

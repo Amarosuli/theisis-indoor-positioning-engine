@@ -1,0 +1,583 @@
+<main class="h-full pb-16 overflow-y-auto overflow-x-auto">
+   <!-- Remove everything INSIDE this div to a really blank page -->
+   <div class="container px-6 mx-auto grid">
+      <!-- map goes here -->
+      <div class=" mx-2 flex justify-center rounded-md h-full items-center">
+         <div id="map" class="w-full p-2 mb-4 mt-2">
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1095 1710">
+               <defs>
+                  <style>
+                     .cls-1,
+                     .cls-3,
+                     .cls-5 {
+                        fill: #fff;
+                     }
+
+                     .cls-2 {
+                        fill: #98afa7;
+                     }
+
+                     .cls-3,
+                     .cls-4 {
+                        stroke: #999;
+                     }
+
+                     .cls-3,
+                     .cls-4,
+                     .cls-5 {
+                        stroke-miterlimit: 10;
+                        stroke-width: 0.25px;
+                     }
+
+                     .cls-4 {
+                        fill: #dceee8;
+                     }
+
+                     .cls-5 {
+                        stroke: #e9500e;
+                     }
+
+                     .cls-6 {
+                        font-size: 18px;
+                     }
+
+                     .cls-13,
+                     .cls-14,
+                     .cls-15,
+                     .cls-19,
+                     .cls-20,
+                     .cls-6,
+                     .cls-7 {
+                        fill: #315b39;
+                        font-family: Lato-Light, Lato;
+                        font-weight: 300;
+                     }
+
+                     .cls-20,
+                     .cls-7 {
+                        font-size: 10px;
+                     }
+
+                     .cls-8 {
+                        letter-spacing: -0.03247em;
+                     }
+
+                     .cls-9 {
+                        letter-spacing: -0.05998em;
+                     }
+
+                     .cls-10 {
+                        letter-spacing: -0.00003em;
+                     }
+
+                     .cls-11,
+                     .cls-15 {
+                        letter-spacing: -0.06em;
+                     }
+
+                     .cls-12 {
+                        letter-spacing: -0.04001em;
+                     }
+
+                     .cls-13,
+                     .cls-15 {
+                        font-size: 9px;
+                     }
+
+                     .cls-14 {
+                        font-size: 6px;
+                     }
+
+                     .cls-16 {
+                        letter-spacing: 0.00005em;
+                     }
+
+                     .cls-17 {
+                        letter-spacing: -0.03998em;
+                     }
+
+                     .cls-18 {
+                        letter-spacing: -0.00005em;
+                     }
+
+                     .cls-19 {
+                        font-size: 5px;
+                     }
+
+                     .cls-20 {
+                        letter-spacing: -0.05996em;
+                     }
+
+                     .cls-21 {
+                        letter-spacing: -0.00005em;
+                     }
+
+                     .cls-22 {
+                        letter-spacing: -0.015em;
+                     }
+                  </style>
+               </defs>
+               <g id="area">
+                  <!-- outer must be the first child element of group #area -->
+                  <g id="outer">
+                     <path class="cls-2" d="M1046,60V860H846V760H646v900H146V1260H46V660H146V60h900m0-7H146a6.99988,6.99988,0,0,0-7,7V653H46a6.99988,6.99988,0,0,0-7,7v600a6.99988,6.99988,0,0,0,7,7h93v393a6.99988,6.99988,0,0,0,7,7H646a6.99988,6.99988,0,0,0,7-7V767H839v93a6.99988,6.99988,0,0,0,7,7h200a6.99988,6.99988,0,0,0,7-7V60a6.99988,6.99988,0,0,0-7-7Z" />
+                  </g>
+                  <rect id="C8D8D9C9" class="cls-1" x="396" y="760" width="50" height="100" />
+                  <rect id="D8E8E9D9" class="cls-1" x="446" y="760" width="100" height="100" />
+                  <rect id="E6F6F7E7" class="cls-3" x="566" y="610" width="80" height="50" />
+                  <rect id="F6G6G7F7" class="cls-3" x="646" y="610" width="100" height="50" />
+                  <rect id="G6H6H7G7" class="cls-3" x="746" y="610" width="100" height="50" />
+                  <rect id="NDT" class="cls-4" x="146" y="660" width="200" height="100" />
+                  <rect id="E7F7E8F8" class="cls-3" x="546" y="660" width="100" height="100" />
+                  <rect id="F7G7F8G8" class="cls-3" x="646" y="660" width="100" height="100" />
+                  <rect id="G7H7G8H8" class="cls-3" x="746" y="660" width="100" height="100" />
+                  <rect id="BEARING" class="cls-4" x="846" y="660" width="100" height="100" />
+                  <rect id="I7J7J8I8" class="cls-4" x="946" y="660" width="100" height="100" />
+                  <rect id="CLEANING" class="cls-4" x="146" y="760" width="200" height="100" />
+                  <rect id="E8F8E9F9" class="cls-3" x="546" y="760" width="50" height="100" />
+                  <rect id="TOOLCRIB_OFFICE" class="cls-4" x="596" y="760" width="50" height="100" />
+                  <rect id="G_ANI" class="cls-4" x="846" y="760" width="200" height="100" />
+                  <rect id="A9B9B10A10" class="cls-3" x="146" y="860" width="100" height="100" />
+                  <rect id="B9C9C10B10" class="cls-3" x="246" y="860" width="100" height="100" />
+                  <rect id="C9D9D10C10" class="cls-3" x="346" y="860" width="100" height="100" />
+                  <rect id="D9E9E10D10" class="cls-3" x="446" y="860" width="100" height="100" />
+                  <rect id="E9F9F10E10" class="cls-3" x="546" y="860" width="100" height="100" />
+                  <rect id="A10B10B11A11" class="cls-3" x="146" y="960" width="100" height="100" />
+                  <rect id="B10C10C11B11" class="cls-3" x="246" y="960" width="100" height="100" />
+                  <rect id="C10D10D11C11" class="cls-3" x="346" y="960" width="100" height="100" />
+                  <rect id="D10E10E11D11" class="cls-3" x="446" y="960" width="100" height="100" />
+                  <rect id="E10F10F11E11" class="cls-3" x="546" y="960" width="100" height="100" />
+                  <rect id="A11B11B12A12" class="cls-3" x="146" y="1060" width="100" height="100" />
+                  <rect id="B11C11C12B12" class="cls-3" x="246" y="1060" width="100" height="100" />
+                  <rect id="C11D11D12C12" class="cls-3" x="346" y="1060" width="100" height="100" />
+                  <rect id="D11E11E12D12" class="cls-3" x="446" y="1060" width="100" height="100" />
+                  <rect id="E11F11F12E12" class="cls-3" x="546" y="1060" width="100" height="100" />
+                  <rect id="A12B12B13A13" class="cls-3" x="146" y="1160" width="100" height="100" />
+                  <rect id="B12C12C13B13" class="cls-3" x="246" y="1160" width="100" height="100" />
+                  <rect id="C12D12D13C13" class="cls-3" x="346" y="1160" width="100" height="100" />
+                  <rect id="D12E12E13D13" class="cls-3" x="446" y="1160" width="100" height="100" />
+                  <rect id="E12F12F13E13" class="cls-3" x="546" y="1160" width="100" height="100" />
+                  <rect id="A13B13B14A14" class="cls-3" x="146" y="1260" width="100" height="100" />
+                  <rect id="B13C13C14B14" class="cls-3" x="246" y="1260" width="100" height="100" />
+                  <rect id="C13D13D14C14" class="cls-3" x="346" y="1260" width="100" height="100" />
+                  <rect id="D13E13E14D14" class="cls-3" x="446" y="1260" width="100" height="100" />
+                  <rect id="E13F13F14E14" class="cls-3" x="546" y="1260" width="100" height="100" />
+                  <rect id="A14B14B15A15" class="cls-3" x="146" y="1360" width="100" height="100" />
+                  <rect id="A7A8" class="cls-3" x="46" y="660" width="100" height="100" />
+                  <rect id="A8A9" class="cls-3" x="46" y="760" width="100" height="100" />
+                  <rect id="A9A10" class="cls-4" x="46" y="860" width="100" height="100" />
+                  <rect id="A10A11" class="cls-4" x="46" y="960" width="100" height="100" />
+                  <rect id="A11A12" class="cls-3" x="46" y="1060" width="100" height="100" />
+                  <rect id="A12A13" class="cls-3" x="46" y="1160" width="100" height="100" />
+                  <rect id="B14C14C15B15" class="cls-3" x="246" y="1360" width="100" height="100" />
+                  <rect id="C14D14D15C15" class="cls-3" x="346" y="1360" width="100" height="100" />
+                  <rect id="D14E14E15D15" class="cls-3" x="446" y="1360" width="100" height="100" />
+                  <rect id="E14F14F15E15" class="cls-3" x="546" y="1360" width="100" height="100" />
+                  <rect id="A15B15B16A16" class="cls-3" x="146" y="1460" width="100" height="100" />
+                  <rect id="B15C15C16B16" class="cls-3" x="246" y="1460" width="100" height="100" />
+                  <rect id="C15D15D16C16" class="cls-3" x="346" y="1460" width="100" height="100" />
+                  <rect id="D15E15E16D16" class="cls-3" x="446" y="1460" width="100" height="100" />
+                  <rect id="E15F15F16E16" class="cls-3" x="546" y="1460" width="100" height="100" />
+                  <rect id="A16B16B17A17" class="cls-3" x="146" y="1560" width="100" height="100" />
+                  <rect id="B16C1C17B17" class="cls-3" x="246" y="1560" width="100" height="100" />
+                  <rect id="C16D16D17C17" class="cls-3" x="346" y="1560" width="100" height="100" />
+                  <rect id="D16E16E17D17" class="cls-3" x="446" y="1560" width="100" height="100" />
+                  <rect id="E16F16F17E17" class="cls-3" x="546" y="1560" width="100" height="100" />
+                  <rect id="I5J5J6I6" class="cls-3" x="946" y="460" width="100" height="100" />
+                  <rect id="APU_OFFICE" class="cls-4" x="946" y="360" width="100" height="100" />
+                  <rect id="I3J3J4I4" class="cls-3" x="946" y="260" width="100" height="100" />
+                  <rect id="H5I5I6H6" class="cls-3" x="846" y="460" width="65" height="100" />
+                  <rect id="H4I4I5H5" class="cls-3" x="846" y="360" width="65" height="100" />
+                  <rect id="H3I3I4H4" class="cls-3" x="846" y="260" width="65" height="100" />
+                  <rect id="G5H5H6G6" class="cls-3" x="746" y="460" width="100" height="100" />
+                  <rect id="G4H4H5G5" class="cls-3" x="746" y="360" width="100" height="100" />
+                  <rect id="G3H3H4G4" class="cls-3" x="746" y="260" width="100" height="100" />
+                  <rect id="F5G5G6F6" class="cls-3" x="646" y="460" width="100" height="100" />
+                  <rect id="F4G4G5F5" class="cls-3" x="646" y="360" width="100" height="100" />
+                  <rect id="F3G3G4F4" class="cls-3" x="646" y="260" width="100" height="100" />
+                  <rect id="E5F5F6E6" class="cls-3" x="546" y="460" width="100" height="100" />
+                  <rect id="E4F4F5E5" class="cls-3" x="546" y="360" width="100" height="100" />
+                  <rect id="E3F3F4E4" class="cls-3" x="546" y="260" width="100" height="100" />
+                  <rect id="D5E5E6D6" class="cls-3" x="446" y="460" width="100" height="100" />
+                  <rect id="D4E4E5D5" class="cls-3" x="446" y="360" width="100" height="100" />
+                  <rect id="D3E3E4D4" class="cls-3" x="446" y="260" width="100" height="100" />
+                  <rect id="B5C5C6B6" class="cls-3" x="246" y="460" width="100" height="100" />
+                  <rect id="B4C4C5B5" class="cls-3" x="246" y="360" width="100" height="100" />
+                  <rect id="B3C3C4B4" class="cls-3" x="246" y="260" width="100" height="100" />
+                  <rect id="A5B5B6A6" class="cls-3" x="146" y="460" width="100" height="100" />
+                  <rect id="A4B4B5A5" class="cls-3" x="146" y="360" width="100" height="100" />
+                  <rect id="A3B3B4A4" class="cls-3" x="146" y="260" width="100" height="100" />
+                  <rect id="GANTRY1" class="cls-5" x="346" y="510" width="100" height="50" />
+                  <rect id="GANTRY2" class="cls-5" x="346" y="460" width="100" height="50" />
+                  <rect id="GANTRY3" class="cls-5" x="346" y="410" width="100" height="50" />
+                  <rect id="GANTRY4" class="cls-5" x="346" y="360" width="100" height="50" />
+                  <rect id="GANTRY5" class="cls-5" x="346" y="310" width="100" height="50" />
+                  <rect id="GANTRY6" class="cls-5" x="346" y="260" width="100" height="50" />
+                  <rect id="MUSHOLA" class="cls-4" x="946" y="610" width="100" height="50" />
+                  <rect id="TOILET2" class="cls-4" x="846" y="610" width="100" height="50" />
+                  <rect id="CS" class="cls-4" x="796" y="710" width="50" height="50" />
+                  <rect id="BALANCING_APU" class="cls-4" x="734" y="710" width="35" height="50" />
+                  <rect id="BALANCING_ENGINE" class="cls-4" x="679" y="710" width="35" height="50" />
+                  <rect id="HSG" class="cls-4" x="561" y="700" width="70" height="50" />
+                  <polygon id="TOOLCRIB_STORE" class="cls-4" points="546 660 546 760 396 760 396 710 446 710 446 660 546 660" />
+                  <rect id="EPC" class="cls-4" x="446" y="610" width="120" height="50" />
+                  <rect id="ASSYDISASSY" class="cls-4" x="396" y="610" width="50" height="100" />
+                  <rect id="EO" class="cls-4" x="277" y="610" width="69" height="50" />
+                  <rect id="CH" class="cls-4" x="246" y="610" width="31" height="50" />
+                  <rect id="TOILET1" class="cls-4" x="146" y="610" width="100" height="50" />
+                  <rect id="OLD_CLEANING" class="cls-4" x="946" y="60" width="100" height="100" />
+                  <rect id="HARDWARE" class="cls-4" x="846" y="60" width="100" height="100" />
+                  <rect id="KITTING" class="cls-4" x="446" y="60" width="400" height="100" />
+                  <rect id="G1000" class="cls-4" x="296" y="60" width="150" height="100" />
+                  <rect id="G3000" class="cls-4" x="146" y="60" width="150" height="100" />
+                  <!-- road here -->
+                  <rect id="R-I6J6J7I7" class="cls-1" x="946" y="560" width="100" height="50" />
+                  <rect id="R-H6I6I7H7" class="cls-1" x="846" y="560" width="100" height="50" />
+                  <rect id="R-G6H6H7G7" class="cls-1" x="746" y="560" width="100" height="50" />
+                  <rect id="R-F6G6G7F7" class="cls-1" x="646" y="560" width="100" height="50" />
+                  <rect id="R-E6F6F7E7" class="cls-1" x="546" y="560" width="100" height="50" />
+                  <rect id="R-D6E6E7D7" class="cls-1" x="446" y="560" width="100" height="50" />
+                  <polygon id="R-C6D6D7C7" class="cls-1" points="446 560 446 610 396 610 396 660 346 660 346 560 446 560" />
+                  <rect id="R-B6C6C7B7" class="cls-1" x="246" y="560" width="100" height="50" />
+                  <rect id="R-A6B6B7A7" class="cls-1" x="146" y="560" width="100" height="50" />
+                  <rect id="R-I2J2J3I3" class="cls-1" x="946" y="160" width="100" height="100" />
+                  <rect id="R-H2I2I3H3" class="cls-1" x="846" y="160" width="100" height="100" />
+                  <rect id="R-G2H2H3G3" class="cls-1" x="746" y="160" width="100" height="100" />
+                  <rect id="R-F2G2G3F3" class="cls-1" x="646" y="160" width="100" height="100" />
+                  <rect id="R-E2F2F3E3" class="cls-1" x="546" y="160" width="100" height="100" />
+                  <rect id="R-D2E2E3D3" class="cls-1" x="446" y="160" width="100" height="100" />
+                  <rect id="R-C2D2D3C3" class="cls-1" x="346" y="160" width="100" height="100" />
+                  <rect id="R-B2C2C3B3" class="cls-1" x="246" y="160" width="100" height="100" />
+                  <rect id="R-A2B2B3A3" class="cls-1" x="146" y="160" width="100" height="100" />
+                  <rect id="R-H5I5I6H6" class="cls-1" x="911" y="460" width="35" height="100" />
+                  <rect id="R-H4I4I5H5" class="cls-1" x="911" y="360" width="35" height="100" />
+                  <rect id="R-H3I3I4H4" class="cls-1" x="911" y="260" width="35" height="100" />
+                  <rect id="R-C7D7D8C8" class="cls-1" x="346" y="660" width="50" height="100" />
+                  <rect id="R-C8D8D9C9" class="cls-1" x="346" y="760" width="50" height="100" />
+               </g>
+               <g id="label">
+                  <g id="pillars">
+                     <rect id="J9" class="cls-2" x="1039.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J8" class="cls-2" x="1039.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J7" class="cls-2" x="1039.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J6" class="cls-2" x="1039.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J5" class="cls-2" x="1039.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J4" class="cls-2" x="1039.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J3" class="cls-2" x="1039.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J2" class="cls-2" x="1039.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="J1" class="cls-2" x="1039.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I9" class="cls-2" x="939.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I8" class="cls-2" x="939.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I7" class="cls-2" x="939.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I6" class="cls-2" x="939.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I5" class="cls-2" x="939.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I4" class="cls-2" x="939.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I3" class="cls-2" x="939.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I2" class="cls-2" x="939.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="I1" class="cls-2" x="939.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H9" class="cls-2" x="839.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H8" class="cls-2" x="839.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H7" class="cls-2" x="839.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H6" class="cls-2" x="839.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H5" class="cls-2" x="839.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H4" class="cls-2" x="839.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H3" class="cls-2" x="839.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H2" class="cls-2" x="839.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="H1" class="cls-2" x="839.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G8" class="cls-2" x="739.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G7" class="cls-2" x="739.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G6" class="cls-2" x="739.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G5" class="cls-2" x="739.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G4" class="cls-2" x="739.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G3" class="cls-2" x="739.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G2" class="cls-2" x="739.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="G1" class="cls-2" x="739.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F17" class="cls-2" x="639.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F16" class="cls-2" x="639.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F15" class="cls-2" x="639.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F14" class="cls-2" x="639.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F13" class="cls-2" x="639.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F12" class="cls-2" x="639.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F11" class="cls-2" x="639.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F10" class="cls-2" x="639.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F9" class="cls-2" x="639.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F8" class="cls-2" x="639.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F7" class="cls-2" x="639.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F6" class="cls-2" x="639.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F5" class="cls-2" x="639.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F4" class="cls-2" x="639.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F3" class="cls-2" x="639.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F2" class="cls-2" x="639.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="F1" class="cls-2" x="639.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E17" class="cls-2" x="539.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E16" class="cls-2" x="539.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E15" class="cls-2" x="539.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E14" class="cls-2" x="539.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E13" class="cls-2" x="539.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E12" class="cls-2" x="539.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E11" class="cls-2" x="539.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E10" class="cls-2" x="539.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E9" class="cls-2" x="539.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E8" class="cls-2" x="539.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E7" class="cls-2" x="539.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E6" class="cls-2" x="539.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E5" class="cls-2" x="539.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E4" class="cls-2" x="539.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E3" class="cls-2" x="539.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E2" class="cls-2" x="539.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="E1" class="cls-2" x="539.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D17" class="cls-2" x="439.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D16" class="cls-2" x="439.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D15" class="cls-2" x="439.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D14" class="cls-2" x="439.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D13" class="cls-2" x="439.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D12" class="cls-2" x="439.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D11" class="cls-2" x="439.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D10" class="cls-2" x="439.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D9" class="cls-2" x="439.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D8" class="cls-2" x="439.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D7" class="cls-2" x="439.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D6" class="cls-2" x="439.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D5" class="cls-2" x="439.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D4" class="cls-2" x="439.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D3" class="cls-2" x="439.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D2" class="cls-2" x="439.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="D1" class="cls-2" x="439.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C17" class="cls-2" x="339.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C16" class="cls-2" x="339.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C15" class="cls-2" x="339.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C14" class="cls-2" x="339.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C13" class="cls-2" x="339.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C12" class="cls-2" x="339.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C11" class="cls-2" x="339.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C10" class="cls-2" x="339.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C9" class="cls-2" x="339.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C8" class="cls-2" x="339.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C7" class="cls-2" x="339.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C6" class="cls-2" x="339.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C5" class="cls-2" x="339.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C4" class="cls-2" x="339.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C3" class="cls-2" x="339.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C2" class="cls-2" x="339.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="C1" class="cls-2" x="339.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B17" class="cls-2" x="239.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B16" class="cls-2" x="239.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B15" class="cls-2" x="239.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B14" class="cls-2" x="239.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B13" class="cls-2" x="239.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B12" class="cls-2" x="239.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B11" class="cls-2" x="239.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B10" class="cls-2" x="239.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B9" class="cls-2" x="239.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B8" class="cls-2" x="239.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B7" class="cls-2" x="239.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B6" class="cls-2" x="239.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B5" class="cls-2" x="239.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B4" class="cls-2" x="239.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B3" class="cls-2" x="239.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B2" class="cls-2" x="239.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="B1" class="cls-2" x="239.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A17" class="cls-2" x="139.78088" y="1656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A16" class="cls-2" x="139.78088" y="1556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A15" class="cls-2" x="139.78088" y="1456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A14" class="cls-2" x="139.78088" y="1356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A13" class="cls-2" x="139.78088" y="1256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A12" class="cls-2" x="139.78088" y="1156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A11" class="cls-2" x="139.78088" y="1056.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A10" class="cls-2" x="139.78088" y="956.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A9" class="cls-2" x="139.78088" y="856.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A8" class="cls-2" x="139.78088" y="756.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A7" class="cls-2" x="139.78088" y="656.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A6" class="cls-2" x="139.78088" y="556.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A5" class="cls-2" x="139.78088" y="456.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A4" class="cls-2" x="139.78088" y="356.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A3" class="cls-2" x="139.78088" y="256.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A2" class="cls-2" x="139.78088" y="156.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                     <rect id="A1" class="cls-2" x="139.78088" y="56.00006" width="11.64404" height="8.28149" rx="1.99188" />
+                  </g>
+                  <g id="texts">
+                     <text class="cls-6" transform="translate(489.41162 639.76465)">EPC</text>
+                     <text class="cls-6" transform="translate(621.41162 113.76465)">KITTING</text>
+                     <text class="cls-7" transform="translate(871.41162 114.76465)">HARD<tspan class="cls-8" x="27.91455" y="0">W</tspan>
+                        <tspan x="37.45996" y="0">ARE</tspan>
+                     </text>
+                     <text class="cls-6" transform="translate(226.41162 715.76465)">N<tspan class="cls-9" x="13.60791" y="0">D</tspan>
+                        <tspan class="cls-10" x="26.20801" y="0">T</tspan>
+                     </text>
+                     <text class="cls-6" transform="translate(350.41162 113.76465)">1000</text>
+                     <text class="cls-6" transform="translate(196.41162 113.76465)">3000</text>
+                     <text class="cls-6" transform="translate(436.41162 741.76465)">
+                        <tspan class="cls-11">T</tspan>
+                        <tspan x="9.44092" y="0">OO</tspan>
+                        <tspan class="cls-12" x="38.15039" y="0">L</tspan>
+                        <tspan x="46.63721" y="0">CRIB</tspan>
+                     </text>
+                     <text class="cls-6" transform="translate(577.41162 731.76465)">HSG</text>
+                     <text class="cls-6" transform="translate(980.41162 417.76465)">APU</text>
+                     <text id="OLDCLEANING" class="cls-7" transform="translate(963.41162 113.76465)">OLD_CLEANING</text>
+                     <text id="NEWCLEANING" class="cls-6" transform="translate(177.41162 815.76465)">NEW_CLEANING</text>
+                     <text class="cls-6" transform="translate(296.41162 639.76465)">EO</text>
+                     <text class="cls-6" transform="translate(809.41162 741.76465)">CS</text>
+                     <text id="ASSYDISASSY-2" data-name="ASSYDISASSY" class="cls-13" transform="translate(423.31274 685.19189) rotate(-90)">ASSY_DISASSY</text>
+                     <text id="APU_BALANCING" class="cls-14" transform="translate(753.31274 752.19189) rotate(-90)">BALANCING</text>
+                     <text id="ENGINE_BALANCING" class="cls-14" transform="translate(699.31274 751.19189) rotate(-90)">BALANCING</text>
+                     <text id="TOOLCRIBOFFICE" class="cls-15" transform="translate(624.31274 847.19189) rotate(-90)">T<tspan class="cls-16" x="4.72021" y="0">OO</tspan>
+                        <tspan class="cls-17" x="19.0752" y="0">L</tspan>
+                        <tspan class="cls-18" x="23.31885" y="0">CRIB_OFFICE</tspan>
+                     </text>
+                     <text class="cls-19" transform="translate(742.28186 61.8299)">G1</text>
+                     <text class="cls-19" transform="translate(241.10071 1661.82983)">B17</text>
+                     <text class="cls-19" transform="translate(241.10071 1561.82983)">B16</text>
+                     <text class="cls-19" transform="translate(241.10071 1461.82983)">B15</text>
+                     <text class="cls-19" transform="translate(241.10071 1361.82983)">B14</text>
+                     <text class="cls-19" transform="translate(241.10071 1261.82983)">B13</text>
+                     <text class="cls-19" transform="translate(241.10071 1161.8299)">B12</text>
+                     <text class="cls-19" transform="translate(241.10071 1061.8299)">B11</text>
+                     <text class="cls-19" transform="translate(241.10071 961.8299)">B10</text>
+                     <text class="cls-19" transform="translate(242.5509 861.8299)">B9</text>
+                     <text class="cls-19" transform="translate(242.5509 761.8299)">B8</text>
+                     <text class="cls-19" transform="translate(242.5509 661.8299)">B7</text>
+                     <text class="cls-19" transform="translate(242.5509 561.8299)">B6</text>
+                     <text class="cls-19" transform="translate(242.5509 461.8299)">B5</text>
+                     <text class="cls-19" transform="translate(242.5509 361.8299)">B4</text>
+                     <text class="cls-19" transform="translate(242.5509 261.8299)">B3</text>
+                     <text class="cls-19" transform="translate(242.5509 161.82989)">B2</text>
+                     <text class="cls-19" transform="translate(242.5509 61.8299)">B1</text>
+                     <text class="cls-19" transform="translate(742.28186 161.82989)">G2</text>
+                     <text class="cls-19" transform="translate(1043.01819 261.8299)">J3</text>
+                     <text class="cls-19" transform="translate(1043.01819 361.8299)">J4</text>
+                     <text class="cls-19" transform="translate(1043.01819 461.8299)">J5</text>
+                     <text class="cls-19" transform="translate(1043.01819 561.8299)">J6</text>
+                     <text class="cls-19" transform="translate(1043.01819 661.8299)">J7</text>
+                     <text class="cls-19" transform="translate(1043.01819 761.8299)">J8</text>
+                     <text class="cls-19" transform="translate(1043.01819 861.8299)">J9</text>
+                     <text class="cls-19" transform="translate(1043.01819 161.82989)">J2</text>
+                     <text class="cls-19" transform="translate(1043.01819 61.8299)">J1</text>
+                     <text class="cls-19" transform="translate(842.26331 261.8299)">H3</text>
+                     <text class="cls-19" transform="translate(842.26331 361.8299)">H4</text>
+                     <text class="cls-19" transform="translate(842.26331 461.8299)">H5</text>
+                     <text class="cls-19" transform="translate(842.26331 561.8299)">H6</text>
+                     <text class="cls-19" transform="translate(842.26331 661.8299)">H7</text>
+                     <text class="cls-19" transform="translate(842.26331 761.8299)">H8</text>
+                     <text class="cls-19" transform="translate(842.26331 861.8299)">H9</text>
+                     <text class="cls-19" transform="translate(842.26331 161.82989)">H2</text>
+                     <text class="cls-19" transform="translate(842.26331 61.8299)">H1</text>
+                     <text class="cls-19" transform="translate(943.40588 261.8299)">I3</text>
+                     <text class="cls-19" transform="translate(943.40588 361.8299)">I4</text>
+                     <text class="cls-19" transform="translate(943.40588 461.8299)">I5</text>
+                     <text class="cls-19" transform="translate(943.40588 561.8299)">I6</text>
+                     <text class="cls-19" transform="translate(943.40588 661.8299)">I7</text>
+                     <text class="cls-19" transform="translate(943.40588 761.8299)">I8</text>
+                     <text class="cls-19" transform="translate(943.40588 861.8299)">I9</text>
+                     <text class="cls-19" transform="translate(943.40588 161.82989)">I2</text>
+                     <text class="cls-19" transform="translate(943.40588 61.8299)">I1</text>
+                     <text class="cls-19" transform="translate(141.09191 1661.82983)">A17</text>
+                     <text class="cls-19" transform="translate(141.09191 1561.82983)">A16</text>
+                     <text class="cls-19" transform="translate(141.09191 1461.82983)">A15</text>
+                     <text class="cls-19" transform="translate(141.09191 1361.82983)">A14</text>
+                     <text class="cls-19" transform="translate(141.09191 1261.82983)">A13</text>
+                     <text class="cls-19" transform="translate(141.09191 1161.8299)">A12</text>
+                     <text class="cls-19" transform="translate(141.09191 1061.8299)">A11</text>
+                     <text class="cls-19" transform="translate(141.09191 961.8299)">A10</text>
+                     <text class="cls-19" transform="translate(142.54211 861.8299)">A9</text>
+                     <text class="cls-19" transform="translate(142.54211 761.8299)">A8</text>
+                     <text class="cls-19" transform="translate(142.54211 661.8299)">A7</text>
+                     <text class="cls-19" transform="translate(142.54211 561.8299)">A6</text>
+                     <text class="cls-19" transform="translate(142.54211 461.8299)">A5</text>
+                     <text class="cls-19" transform="translate(142.54211 361.8299)">A4</text>
+                     <text class="cls-19" transform="translate(142.54211 261.8299)">A3</text>
+                     <text class="cls-19" transform="translate(142.54211 161.82989)">A2</text>
+                     <text class="cls-19" transform="translate(142.54211 61.8299)">A1</text>
+                     <text class="cls-19" transform="translate(342.39465 261.8299)">C3</text>
+                     <text class="cls-19" transform="translate(342.39465 361.8299)">C4</text>
+                     <text class="cls-19" transform="translate(342.39465 461.8299)">C5</text>
+                     <text class="cls-19" transform="translate(342.39465 561.8299)">C6</text>
+                     <text class="cls-19" transform="translate(342.39465 661.8299)">C7</text>
+                     <text class="cls-19" transform="translate(342.39465 761.8299)">C8</text>
+                     <text class="cls-19" transform="translate(342.39465 861.8299)">C9</text>
+                     <text class="cls-19" transform="translate(340.94446 961.8299)">C10</text>
+                     <text class="cls-19" transform="translate(340.94446 1061.8299)">C11</text>
+                     <text class="cls-19" transform="translate(340.94446 1161.8299)">C12</text>
+                     <text class="cls-19" transform="translate(340.94446 1261.82983)">C13</text>
+                     <text class="cls-19" transform="translate(340.94446 1361.82983)">C14</text>
+                     <text class="cls-19" transform="translate(340.94446 1461.82983)">C15</text>
+                     <text class="cls-19" transform="translate(340.94446 1561.82983)">C16</text>
+                     <text class="cls-19" transform="translate(340.94446 1661.82983)">C17</text>
+                     <text class="cls-19" transform="translate(342.39465 161.82989)">C2</text>
+                     <text class="cls-19" transform="translate(342.39465 61.8299)">C1</text>
+                     <text class="cls-19" transform="translate(442.25305 261.8299)">D3</text>
+                     <text class="cls-19" transform="translate(442.25305 361.8299)">D4</text>
+                     <text class="cls-19" transform="translate(442.25305 461.8299)">D5</text>
+                     <text class="cls-19" transform="translate(442.25305 561.8299)">D6</text>
+                     <text class="cls-19" transform="translate(442.25305 661.8299)">D7</text>
+                     <text class="cls-19" transform="translate(442.25305 761.8299)">D8</text>
+                     <text class="cls-19" transform="translate(442.25305 861.8299)">D9</text>
+                     <text class="cls-19" transform="translate(440.80334 961.8299)">D10</text>
+                     <text class="cls-19" transform="translate(440.80334 1061.8299)">D11</text>
+                     <text class="cls-19" transform="translate(440.80334 1161.8299)">D12</text>
+                     <text class="cls-19" transform="translate(440.80334 1261.82983)">D13</text>
+                     <text class="cls-19" transform="translate(440.80334 1361.82983)">D14</text>
+                     <text class="cls-19" transform="translate(440.80334 1461.82983)">D15</text>
+                     <text class="cls-19" transform="translate(440.80334 1561.82983)">D16</text>
+                     <text class="cls-19" transform="translate(440.80334 1661.82983)">D17</text>
+                     <text class="cls-19" transform="translate(442.25305 161.82989)">D2</text>
+                     <text class="cls-19" transform="translate(442.25305 61.8299)">D1</text>
+                     <text class="cls-19" transform="translate(542.6759 261.8299)">E3</text>
+                     <text class="cls-19" transform="translate(542.6759 361.8299)">E4</text>
+                     <text class="cls-19" transform="translate(542.6759 461.8299)">E5</text>
+                     <text class="cls-19" transform="translate(542.6759 561.8299)">E6</text>
+                     <text class="cls-19" transform="translate(542.6759 661.8299)">E7</text>
+                     <text class="cls-19" transform="translate(542.6759 761.8299)">E8</text>
+                     <text class="cls-19" transform="translate(542.6759 861.8299)">E9</text>
+                     <text class="cls-19" transform="translate(541.22571 961.8299)">E10</text>
+                     <text class="cls-19" transform="translate(541.22571 1061.8299)">E11</text>
+                     <text class="cls-19" transform="translate(541.22571 1161.8299)">E12</text>
+                     <text class="cls-19" transform="translate(541.22571 1261.82983)">E13</text>
+                     <text class="cls-19" transform="translate(541.22571 1361.82983)">E14</text>
+                     <text class="cls-19" transform="translate(541.22571 1461.82983)">E15</text>
+                     <text class="cls-19" transform="translate(541.22571 1561.82983)">E16</text>
+                     <text class="cls-19" transform="translate(541.22571 1661.82983)">E17</text>
+                     <text class="cls-19" transform="translate(542.6759 161.82989)">E2</text>
+                     <text class="cls-19" transform="translate(542.6759 61.8299)">E1</text>
+                     <text class="cls-19" transform="translate(642.72327 261.8299)">F3</text>
+                     <text class="cls-19" transform="translate(642.72327 361.8299)">F4</text>
+                     <text class="cls-19" transform="translate(642.72327 461.8299)">F5</text>
+                     <text class="cls-19" transform="translate(642.72327 561.8299)">F6</text>
+                     <text class="cls-19" transform="translate(642.72327 661.8299)">F7</text>
+                     <text class="cls-19" transform="translate(642.72327 761.8299)">F8</text>
+                     <text class="cls-19" transform="translate(642.72327 861.8299)">F9</text>
+                     <text class="cls-19" transform="translate(641.27307 961.8299)">F10</text>
+                     <text class="cls-19" transform="translate(641.27307 1061.8299)">F11</text>
+                     <text class="cls-19" transform="translate(641.27307 1161.8299)">F12</text>
+                     <text class="cls-19" transform="translate(641.27307 1261.82983)">F13</text>
+                     <text class="cls-19" transform="translate(641.27307 1361.82983)">F14</text>
+                     <text class="cls-19" transform="translate(641.27307 1461.82983)">F15</text>
+                     <text class="cls-19" transform="translate(641.27307 1561.82983)">F16</text>
+                     <text class="cls-19" transform="translate(641.27307 1661.82983)">F17</text>
+                     <text class="cls-19" transform="translate(642.72327 161.82989)">F2</text>
+                     <text class="cls-19" transform="translate(642.72327 61.8299)">F1</text>
+                     <text class="cls-19" transform="translate(742.28186 261.8299)">G3</text>
+                     <text class="cls-19" transform="translate(742.28186 361.8299)">G4</text>
+                     <text class="cls-19" transform="translate(742.28186 461.8299)">G5</text>
+                     <text class="cls-19" transform="translate(742.28186 561.8299)">G6</text>
+                     <text class="cls-19" transform="translate(742.28186 661.8299)">G7</text>
+                     <text class="cls-19" transform="translate(742.28186 761.8299)">G8</text>
+                     <text id="TOILET1-2" data-name="TOILET1" class="cls-20" transform="translate(179.00912 639.598)">T<tspan class="cls-21" x="5.24512" y="0">OILET </tspan></text>
+                     <text class="cls-7" transform="translate(972.73383 639.59834)">MUSHOLA</text>
+                     <text id="TOILET2-2" data-name="TOILET2" class="cls-20" transform="translate(878.73383 639.59834)">T<tspan class="cls-21" x="5.24512" y="0"> OILET</tspan></text>
+                     <text class="cls-6" transform="translate(895.73383 818.59834)">GU<tspan class="cls-22" x="26.67578" y="0">D</tspan>
+                        <tspan x="40.08545" y="0">ANG_ANI</tspan>
+                     </text>
+                  </g>
+               </g>
+               <g id="road">
+               </g>
+               <g id="engine">
+                  <!-- engine goes here -->
+                  <!-- this group must be under all other elements -->
+               </g>
+            </svg>
+         </div>
+      </div>
+   </div>
+</main>

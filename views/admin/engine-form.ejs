@@ -1,0 +1,133 @@
+<main class="h-full pb-5 overflow-y-auto">
+    <div class="container px-6 mx-auto justify-center">
+        <h2 class="my-5 py-1 text-center uppercase text-2xl font-semibold text-green-600 dark:text-gray-200 border-b border-green-400">
+            New Engine Forms
+        </h2>
+        <!-- FORM START HERE -->
+        <form id="engineForm" class="w-full justify-center grid md:grid-cols-2 md:gap-4" autocomplete="off">
+            <div id="left block">
+                <!-- General Engine Information -->
+                <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                    Engine Information
+                </h4>
+                <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Engine Serial Number</span>
+                        <input id="esn" required class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="XXXXXX" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="flex-rows text-gray-700 dark:text-gray-400">Engine Type</span>
+                        <div class="flex flex-cols space-x-2">
+                            <select required id="type" class="block mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                                <option value="" selected disabled>Select</option>
+                            </select>
+                            <input id="config" required class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Config" />
+                        </div>
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Customer</span>
+                        <select required id="customer" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                            <option value="" selected disabled>Select</option>
+
+                        </select>
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Status</span>
+                        <select required id="status" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                            <option value="" selected disabled>Select</option>
+
+                        </select>
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Date in</span>
+                        <input id="dateIn" type="date" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Date in" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Last Preserve Date</span>
+                        <input id="preserve_date" type="date" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Last Preserve Date" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Preservation Type</span>
+                        <select required id="preserve_type" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                            <option value="" selected disabled>Select</option>
+                            <option value="90">90 Days</option>
+                            <option value="180">180 Days</option>
+                            <option value="365">365 Days</option>
+                        </select>
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Reason</span>
+                        <textarea id="reason" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Reason"> </textarea>
+                    </label>
+                </div>
+            </div>
+            <div id="right block">
+                <!-- Storage Information Selector -->
+                <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                    Storage Information
+                </h4>
+                <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">
+                            Storage Type
+                        </span>
+                        <select required id="s_type" onchange="switchForm()" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                            <option value="" selected disabled>Select</option>
+                            <option value="ETS">Transportation Stand</option>
+                            <option value="EPS">Pedestal</option>
+                            <option value="EGS">Gantry</option>
+                        </select>
+                    </label>
+                </div>
+                <!-- Transportation Stand Form -->
+                <div id="ETSForm" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Base Part Number</span>
+                        <input id="basePN" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Base Part Number" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Base Serial Number</span>
+                        <input id="baseSN" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Base Serial Number" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">cradle Part Number</span>
+                        <input id="cradlePN" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="cradle Part Number" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">cradle Serial Number</span>
+                        <input id="cradleSN" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="cradle Serial Number" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Owner</span>
+                        <input id="owner" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Owner" />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Remark</span>
+                        <input id="remark" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Remark" />
+                    </label>
+                </div>
+                <!-- Gantry Form -->
+                <div id="EGSForm" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">
+                            Pick Gantry
+                        </span>
+                        <select id="gantryNum" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                            <option value="Gantry 1">Gantry 1</option>
+                            <option value="Gantry 2">Gantry 2</option>
+                            <option value="Gantry 3">Gantry 3</option>
+                            <option value="Gantry 4">Gantry 4</option>
+                            <option value="Gantry 5">Gantry 5</option>
+                            <option value="Gantry 6">Gantry 6</option>
+                        </select>
+                    </label>
+                </div>
+                <!-- button submit form -->
+                <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    <button id="save " class="px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Save
+                        Data</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>

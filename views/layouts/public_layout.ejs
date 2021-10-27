@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>
+      <%= title %>
+   </title>
+   <!-- Template Refference -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="css/tailwind.output.css" />
+   <script src="js/external/alpine.min.js" defer></script>
+   <script src="js/external/init-alpine.js"></script>
+   <script src="js/external/focus-trap.js"></script>
+   <!-- Own Refference -->
+   <link rel="stylesheet" href="css/animate.min.css" />
+   <script src="js/external/sweetalert2.all.min.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+   <script type="module" src="js/public.js"></script>
+   <!-- Unique -->
+   <% if (top) { %>
+      <% top.forEach(script => { %>
+         <%- script %> 
+      <% }) %>
+   <% } else { %>
+      <% console.log('no Data') %>
+      <% } %>
+</head>
+
+<body>
+   <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen}">
+      <%- include('../components/sidebar-public');  -%>
+      <div class="flex flex-col flex-1">
+         <%- include('../components/topbar-public'); -%>
+         <%- body %> 
+      </div>
+   </div>
+   <% if (bottom) { %>
+      <% bottom.forEach(script => { %>
+         <%- script %> 
+      <% }) %>
+   <% } %>
+  
+</body>
+</html>

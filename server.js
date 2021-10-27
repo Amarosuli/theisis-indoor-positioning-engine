@@ -5,7 +5,7 @@ const publics = require('./routes/public_route.js')
 const admins = require('./routes/admin_route.js')
 
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.use(expressLayouts)
 app.use(express.static('public'), router)

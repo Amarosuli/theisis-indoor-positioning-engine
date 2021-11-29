@@ -1,4 +1,4 @@
-<main class="h-full pb-16 overflow-y-auto">
+<main id="table_list" class="h-full pb-16 overflow-y-auto">
     <div class="container px-6 mx-auto grid">
         <!-- With actions -->
         <div class="flex flex-cols justify-between">
@@ -10,13 +10,14 @@
             <h4 class="my-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
                 Engine List
             </h4>
-            <button id="export-table" class="flex items-center self-center space-x-1  px-4 h-8 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">
-                <span>Excel</span>
+            <a id="export-table" href="/admin/engine-report" class="flex items-center self-center space-x-1  px-4 h-8 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">
+            <!-- <button id="export-table" onclick="pdf()" class="flex items-center self-center space-x-1  px-4 h-8 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green"> -->
+                <span>Report</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                     </path>
                 </svg>
-            </button>
+               </a>
         </div>
         <div class="w-full overflow-hidden rounded-lg shadow-xs">
             <div class="w-full overflow-x-auto">

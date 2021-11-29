@@ -1,6 +1,7 @@
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const router = express.Router()
+const puppeteer = require('puppeteer')
 
 // middleware that is specific to this router
 router.use(express.static('public'))
@@ -25,6 +26,15 @@ router.get('/profile', (req, res) => {
         layout: './layouts/admin_layout.ejs'
     })
 })
+router.get('/engine-qrcode-form', (req, res) => {
+    res.render('admin/engine-qrcode-form', {
+        title: 'Engine Form - QR Code',
+        top: '',
+        bottom: ['<script type="module" src="js/app/engine.form.js"></script>',
+      '<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>'],
+        layout: './layouts/admin_layout.ejs'
+    })
+})
 router.get('/engine-form', (req, res) => {
     res.render('admin/engine-form', {
         title: 'Engine Form',
@@ -37,7 +47,19 @@ router.get('/engine-list', (req, res) => {
     res.render('admin/engine-list', {
         title: 'Engine List',
         top: [
-            '<script type="module" src="js/app/engine.list.js"></script>'
+         //   '<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>',
+           '<script type="module" src="js/app/engine.list.js"></script>'
+        ],
+        bottom: '',
+        layout: './layouts/admin_layout.ejs'
+    })
+})
+router.get('/engine-report', (req, res) => {
+    res.render('admin/engine-report', {
+        title: 'Engine Report',
+        top: [
+         //   '<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>',
+           '<script type="module" src="js/app/engine.list.js"></script>'
         ],
         bottom: '',
         layout: './layouts/admin_layout.ejs'
@@ -94,5 +116,7 @@ router.get('/map', (req, res) => {
         layout: './layouts/admin_layout.ejs'
     })
 })
+
+
 
 module.exports = router

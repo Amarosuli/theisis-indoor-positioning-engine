@@ -1,6 +1,8 @@
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const router = express.Router()
+
+
 const publics = require('./routes/public_route.js')
 const admins = require('./routes/admin_route.js')
 
@@ -24,6 +26,7 @@ app.use('/public', publics)
 // admin routes
 app.use('/admin', admins)
 
+
 // login routes
 app.get('/login', (req, res) => {
     res.render('login', {
@@ -40,6 +43,8 @@ app.get('*', (req, res) => {
         layout: './layouts/login_layout'
     })
 })
+
+
 
 
 app.listen(port, () => {

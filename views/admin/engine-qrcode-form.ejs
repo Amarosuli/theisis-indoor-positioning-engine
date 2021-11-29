@@ -12,16 +12,21 @@
                 </h4>
                 <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
                     <label class="block text-sm">
-                     <span class="flex-rows text-gray-700 dark:text-gray-400">Engine Serial Number</span>
-                     <div class="w-full mt-1 flex-rows justify-center items-center" id="qr-reader"></div>
+                     <span class="flex-rows text-gray-700 dark:text-gray-400">Engine Barcode</span>
+                     <div class="w-full mt-1 flex-rows justify-center item-center" id="engine-reader">
+                        <button id="engine_scan_btn" class="my-2 px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Scan Engine</button>
+                     </div>
                     </label>
+
+                    <label class="block mt-4 text-sm">
+                     <span class="text-gray-700 dark:text-gray-400">Engine Serial Number</span>
+                     <input id="esn" required class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="XXXXXX" />
+                 </label>
                     <label class="block mt-4 text-sm">
                         <span class="flex-rows text-gray-700 dark:text-gray-400">Engine Type</span>
                         <div class="flex flex-cols space-x-2">
-                            <select required id="type" class="block mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
-                                <option value="" selected disabled>Select</option>
-                            </select>
-                            <input id="config" required class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Config" />
+                            <input id="type" required class="block mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-input focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green" placeholder="Type" />
+                            <input id="config" required class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Config"/>
                         </div>
                     </label>
                     <label class="block mt-4 text-sm">
@@ -81,7 +86,13 @@
                 </div>
                 <!-- Transportation Stand Form -->
                 <div id="ETSForm" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <label class="block text-sm">
+                   <label class="block text-sm">
+                     <span class="flex-rows text-gray-700 dark:text-gray-400">Transportation Stand Barcode</span>
+                     <div class="w-full mt-1 flex-rows justify-center item-center" id="ts-reader">
+                        <button id="ts_scan_btn" class="my-2 px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Scan Transportation Stand</button>
+                     </div>
+                   </label>
+                    <label class="block mt-4 text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Base Part Number</span>
                         <input id="basePN" class="block w-full mt-1 text-sm dark:border-green-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-green form-input" placeholder="Base Part Number" />
                     </label>

@@ -227,14 +227,14 @@ function saveEGS(esn, type, config, customer, status, dateIn, preserve_date, pre
 
 // for form options and data
 window.onload = function set() {
-   enginetype.on('child_added', function (d) {
-      let type = document.getElementById('type')
-      let fill = document.createElement("option")
-      fill.text = d.val().type
-      fill.value = d.val().type
-      type.options.add(fill, 1)
+   // enginetype.on('child_added', function (d) {
+   //    let type = document.getElementById('type')
+   //    let fill = document.createElement("option")
+   //    fill.text = d.val().type
+   //    fill.value = d.val().type
+   //    type.options.add(fill, 1)
 
-   })
+   // })
 
    customerlist.on('child_added', function (d) {
       let type = document.getElementById('customer')
@@ -254,43 +254,67 @@ window.onload = function set() {
 }
 
 // QR Code
-let video = document.getElementById('qr-reader');
-let html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 250 });
+let engineScanBtn = document.getElementById('engine_scan_btn')
+let tsScanBtn = document.getElementById('ts_scan_btn')
+let engineBarcode = document.getElementById('engine-reader');
+let tsBarcode = document.getElementById('ts-reader');
+let engineScanner = new Html5QrcodeScanner("engine-reader", { fps: 10, qrbox: 250 });
+let tsScanner = new Html5QrcodeScanner("ts-reader", { fps: 10, qrbox: 250 });
 
-// Get access to the camera!
-// if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-//    // Not adding `{ audio: true }` since we only want video now
-//    navigator.mediaDevices.getUserMedia({ video: {
-//       width: { min: 1280 },
-//       height: { min:720}
-//    } }).then(function (stream) {
-//       //video.src = window.URL.createObjectURL(stream);
-//       video.srcObject = stream;
-//    });
-// }
+// let ar = {"esn": 802745, "type": "CFM56-7", "config": "B746"}
+// let gr = {"basePN": 47384, "baseSN": 734988, "cradlePN": 23000, "cradleSN": 83400, "owner": "DAE"}
+// console.log(ar, gr);
 
-function onScanSuccess(decodedText, decodedResult) {
+engineScanBtn.addEventListener('click', (e) => {
+   e.preventDefault()
+   engineScanner.render(onEngineScanSuccess, onScanError);
+})
+tsScanBtn.addEventListener('click', (e) => {
+   e.preventDefault()
+   tsScanner.render(onTsScanSuccess, onScanError);
+})
+function onEngineScanSuccess(decodedText, decodedResult) {
    let json = JSON.parse(decodedText.replace(/'\'/, ''))
    
-   html5QrcodeScanner.clear().then((ignore) => {
-      let p = document.createElement('p')
+   document.getElementById('esn').value = json.esn
+   document.getElementById('type').value = json.type
+   document.getElementById('config').value = json.config
+   
+   engineScanner.clear().then((ignore) => {
       let btn = document.createElement('button')
       btn.innerText = 'Scan Again'
-      btn.id = 'rescan'
-      btn.setAttribute('class', 'px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green')
+      btn.setAttribute('class', 'self-center my-2 px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue')
       btn.addEventListener('click', (e) => {
          e.preventDefault()
-         html5QrcodeScanner.render(onScanSuccess, onScanError);
+         engineScanner.render(onEngineScanSuccess, onScanError);
       })
-      p.innerText = json.esn
-      video.appendChild(btn)
-      video.appendChild(p)
+
+      engineBarcode.appendChild(btn)
    })
-   // i think it was good if use template node
+}
+
+function onTsScanSuccess(decodedText, decodedResult) {
+   let json = JSON.parse(decodedText.replace(/'\'/, ''))
+   
+   document.getElementById('basePN').value = json.basePN
+   document.getElementById('baseSN').value = json.baseSN
+   document.getElementById('cradlePN').value = json.cradlePN
+   document.getElementById('cradleSN').value = json.cradleSN
+   document.getElementById('owner').value = json.owner
+   
+   tsScanner.clear().then((ignore) => {
+      let btn = document.createElement('button')
+      btn.innerText = 'Scan Again'
+      btn.setAttribute('class', 'self-center my-2 px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue')
+      btn.addEventListener('click', (e) => {
+         e.preventDefault()
+         tsScanner.render(onTsScanSuccess, onScanError);
+      })
+
+      tsBarcode.appendChild(btn)
+   })
 }
 
 function onScanError(errorMessage) {
    console.log(errorMessage);
 }
-
-html5QrcodeScanner.render(onScanSuccess, onScanError);

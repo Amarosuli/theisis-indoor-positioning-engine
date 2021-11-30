@@ -203,6 +203,7 @@ let filter = document.getElementById('filterBy')
 filter.addEventListener('change', () => {
    report(filter.value)
 })
+filter.onload = preview('all')
 
 function report(filter) {
    let type_option = document.getElementById('type_option'),
@@ -213,13 +214,11 @@ function report(filter) {
       type_option.addEventListener('change', () => {
          preview('et', type_option.value)
       })
-   }
-   if (filter == 'customer') {
+   } else if (filter == 'customer') {
       customer_option.addEventListener('change', () => {
          preview('c', customer_option.value)
       })
-   }
-   if (filter == 'status') {
+   } else if (filter == 'status') {
       status_option.addEventListener('change', () => {
          preview('s', status_option.value)
       })
@@ -255,5 +254,12 @@ function preview(control, data) {
          render(m)
       })
    }
-
+   if (control == 'all') {
+      enginelist.once('value', (d) => {
+         d.forEach(t => {
+            arx.push(t.val())
+         })
+         render(arx)
+      })
+   }
 }

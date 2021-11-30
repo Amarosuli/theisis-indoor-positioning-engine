@@ -58,8 +58,8 @@ router.get('/engine-report', (req, res) => {
     res.render('admin/engine-report', {
         title: 'Engine Report',
         top: [
-         //   '<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>',
-           '<script type="module" src="js/app/engine.list.js"></script>'
+           '<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>',
+           '<script type="module" src="js/app/engine.report.js"></script>'
         ],
         bottom: '',
         layout: './layouts/admin_layout.ejs'

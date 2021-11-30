@@ -1,12 +1,97 @@
 <main id="table_list" class="h-full pb-16 overflow-y-auto">
    <div class="container px-6 mx-auto grid">
        <!-- With actions -->
-       <div class="flex flex-cols justify-between">
-           <h2 class="mt-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-               REPORT
-           </h2>
-       </div>
-       
-       </div>
+       <h2 class="my-5 py-1 text-center uppercase text-2xl font-semibold text-green-600 dark:text-gray-200 border-b border-green-400">
+         Engine Reports
+     </h2>
+         <form id="engineForm" class="w-full justify-center grid md:grid-cols-1 md:gap-4" autocomplete="off">
+          <div id="option_block">
+              <!-- Storage Information Selector -->
+              <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                  Choose Options
+              </h4>
+              <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                  <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">
+                          Filter By
+                      </span>
+                      <select required id="filterBy" onchange="switchForm()" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                          <option value="" selected disabled>Select</option>
+                          <option value="engine_type">Engine Type</option>
+                          <option value="customer">Customer</option>
+                          <option value="status">Status</option>
+                      </select>
+                  </label>
+              </div>
+              <!-- Engine Type -->
+              <div id="engine_type" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+               <label class="block text-sm">
+                  <span class="flex-rows text-gray-700 dark:text-gray-400">Engine Type</span>
+                  <div class="flex flex-cols space-x-2">
+                      <select required id="type_option" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                          <option value="" selected disabled>Select</option>
+                      </select>
+                  </div>
+              </label>
+              </div>
+              <!-- Customer -->
+              <div id="customer" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+               <label class="block text-sm">
+                  <span class="flex-rows text-gray-700 dark:text-gray-400">Customer</span>
+                  <div class="flex flex-cols space-x-2">
+                      <select required id="customer_option" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                          <option value="" selected disabled>Select</option>
+                      </select>
+                  </div>
+              </label>
+              </div>
+              <!-- Status -->
+              <div id="status" class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+               <label class="block text-sm">
+                  <span class="flex-rows text-gray-700 dark:text-gray-400">Status</span>
+                  <div class="flex flex-cols space-x-2">
+                      <select required id="status_option" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-green-600 dark:bg-gray-700 form-select focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-green">
+                          <option value="" selected disabled>Select</option>
+                      </select>
+                  </div>
+              </label>
+              </div>
+
+              <!-- button submit form -->
+              <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                  <button id="pdf" class="px-4 py-2 justify-center text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Generate Report</button>
+              </div>
+          </div>
+          <div id="preview_block">
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+               <div class="w-full overflow-x-auto">
+                   <table id="engine-table" class="w-full whitespace-no-wrap">
+                     <h2 class="my-5 py-1 text-center uppercase text-2xl font-semibold text-green-600 dark:text-gray-200 border-b border-green-400">
+                        Engine Reports
+                    </h2>
+                       <thead>
+                           <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                               <th class="px-4 py-3">ESN</th>
+                               <th class="px-4 py-3">Type</th>
+                               <th class="px-4 py-3">Customer</th>
+                               <th class="px-4 py-3">Status</th>
+                               <th class="px-4 py-3">Date In</th>
+                               <th class="px-4 py-3">Preserve</th>
+                               <th class="px-4 py-3">Location</th>
+                               <th class="px-4 py-3">Storage</th>
+                           </tr>
+                       </thead>
+                       <tbody id="target-data" class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                       </tbody>
+                   </table>
+               </div>
+               <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
+                   <span id="length-data" class="flex items-center col-span-3">
+                   </span>
+                   <span class="col-span-2"></span>
+               </div>
+           </div>
+          </div>
+      </form>
    </div>
 </main>

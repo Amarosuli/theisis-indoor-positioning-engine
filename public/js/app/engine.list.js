@@ -447,17 +447,3 @@ window.storage = function storage(value) {
       }
    })
 }
-
-
-
-window.pdf = function pdf() {
-   let element = document.getElementById('engine-table');
-   let opt = {
-      margin: 1,
-      filename: 'Report.pdf',
-      image: { type: 'png', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
-   };
-   html2pdf().set(opt).from(element).save();
-}
